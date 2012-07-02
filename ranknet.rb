@@ -31,6 +31,7 @@ def grab_token
   
   #puts response.body
   
+  #yes I'm bad for using regex on an non-regular language
   regex = /(meta content=")\S+\s(name="csrf-token")/
   
   csrf_string = response.body.match(regex).to_s
